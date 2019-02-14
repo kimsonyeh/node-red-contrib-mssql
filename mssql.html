@@ -24,6 +24,10 @@
         <input type="text" id="node-config-input-server" placeholder="Server name or IP">
     </div>
     <div class="form-row">
+        <label for="node-config-input-port"><i class="icon-bookmark"></i> Port</label>
+        <input type="text" id="node-config-input-port" placeholder="Port">
+    </div>
+    <div class="form-row">
         <label for="node-config-input-username"><i class="fa fa-user"></i> Username</label>
         <input type="text" id="node-config-input-username">
     </div>
@@ -40,6 +44,10 @@
         <input type="text" id="node-config-input-database">
     </div>
     <div class="form-row">
+        <label for="node-config-input-pool"><i class="icon-bookmark"></i> Max Pool Size</label>
+        <input type="text" id="node-config-input-pool" placeholder="Max Pool Size">
+    </div>
+    <div class="form-row">
         <label for="node-config-input-encyption"><i class="fa fa-user"></i> Use Encryption?</label>
         <input type="checkbox" id="node-config-input-encyption">
         <div class="form-tips">SQL Databases hosted on Azure will need this checked</div>
@@ -52,8 +60,10 @@
         defaults: {
             name: {value:""},
             server: {value:""},
+            port: {value:"1433"},
             encyption:{value:true},
-            database: {value:""}
+            database: {value:""},
+            pool: { value: "10" },
         },
         inputs:0,
         outputs:0,
